@@ -1,5 +1,5 @@
 # run-binjr
-A quick and easy way to get and run the latest version of binjr using Apache Maven.
+A quick and easy way to get and run the latest version of [binjr](https://www.binjr.eu) using Apache Maven.
 
 ## Getting started
 1. Clone this repo: 
