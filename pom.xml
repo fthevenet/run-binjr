@@ -19,11 +19,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>eu.fthevenet</groupId>
-    <artifactId>run-binjr</artifactId>
-    <version>1.0.0</version>
+    <artifactId>binjr-app</artifactId>
+    <version>2.0.0</version>
     <url>http://www.binjr.eu</url>
     <packaging>pom</packaging>
     <description>Flexible Time Series Visualization</description>
+    <properties>
+        <binjr.version>RELEASE</binjr.version>
+    </properties>
     <developers>
         <developer>
             <name>Frederic Thevenet</name>
@@ -51,16 +54,31 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>eu.fthevenet.binjr.Bootstrap</mainClass>            
+                    <mainClass>eu.binjr.core.Binjr</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
     <dependencies>
         <dependency>
-            <groupId>eu.fthevenet</groupId>
-            <artifactId>binjr</artifactId>
-            <version>RELEASE</version>
-        </dependency>    
+            <groupId>eu.binjr</groupId>
+            <artifactId>binjr-core</artifactId>
+            <version>${binjr.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>eu.binjr</groupId>
+            <artifactId>binjr-adapter-csv</artifactId>
+            <version>${binjr.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>eu.binjr</groupId>
+            <artifactId>binjr-adapter-rrd4j</artifactId>
+            <version>${binjr.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>eu.binjr</groupId>
+            <artifactId>binjr-adapter-jrds</artifactId>
+            <version>${binjr.version}</version>
+        </dependency>
     </dependencies>
 </project>
